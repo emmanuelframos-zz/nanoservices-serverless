@@ -1,0 +1,12 @@
+service: tags-handler
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  tag:
+    handler: handler.tag
+    role: arn:aws:iam::810096332563:role/lambda-nanoservices
+    events:     
+      - sns: arn:aws:sns:us-east-1:810096332563:s3-raw-images-put-topic

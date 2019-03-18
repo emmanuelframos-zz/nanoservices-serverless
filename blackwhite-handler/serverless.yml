@@ -1,0 +1,13 @@
+service: blackwhite-handler
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  blackwhite:
+    handler: handler.blackwhite
+    role: arn:aws:iam::810096332563:role/lambda-nanoservices
+    events:     
+       - sns: arn:aws:sns:us-east-1:810096332563:s3-raw-images-put-topic
+  
