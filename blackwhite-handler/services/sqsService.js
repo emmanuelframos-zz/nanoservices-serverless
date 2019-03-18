@@ -9,7 +9,7 @@ const sqs = new AWS.SQS()
 const putMessage = message => {
     return new Promise((res, rej) => {
         sqs.sendMessage({
-            QueueUrl: 'https://sqs.us-east-1.amazonaws.com/810096332563/nanoservices-image_queue',
+            QueueUrl: '[QUEUE_URL]',
             MessageBody: JSON.stringify(message)
         }, (err, data) => {
             if (err) {
