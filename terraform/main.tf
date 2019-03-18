@@ -53,7 +53,7 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
 
 resource "aws_sns_topic" "basic-sns-topic" {
   name = "s3-raw-images-put-topic"
-  policy = "{\"Version\":\"2008-10-17\",\"Id\":\"__default_policy_ID\",\"Statement\":[{\"Sid\":\"__default_statement_ID\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":[\"SNS:GetTopicAttributes\",\"SNS:SetTopicAttributes\",\"SNS:AddPermission\",\"SNS:RemovePermission\",\"SNS:DeleteTopic\",\"SNS:Subscribe\",\"SNS:ListSubscriptionsByTopic\",\"SNS:Publish\",\"SNS:Receive\"],\"Resource\":\"arn:aws:sns:us-east-1:810096332563:s3-raw-images-put-topic\",\"Condition\":{\"ArnLike\":{\"AWS:SourceArn\":\"${aws_s3_bucket.bucket-nanoservices-raw-images.arn}\"}}}]}"
+  policy = "{\"Version\":\"2008-10-17\",\"Id\":\"__default_policy_ID\",\"Statement\":[{\"Sid\":\"__default_statement_ID\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":[\"SNS:GetTopicAttributes\",\"SNS:SetTopicAttributes\",\"SNS:AddPermission\",\"SNS:RemovePermission\",\"SNS:DeleteTopic\",\"SNS:Subscribe\",\"SNS:ListSubscriptionsByTopic\",\"SNS:Publish\",\"SNS:Receive\"],\"Resource\":\"arn:aws:sns:us-east-1:[ACCOUNT_NUMBER]:s3-raw-images-put-topic\",\"Condition\":{\"ArnLike\":{\"AWS:SourceArn\":\"${aws_s3_bucket.bucket-nanoservices-raw-images.arn}\"}}}]}"
 }
 
 resource "aws_s3_bucket_notification" "bucket-nanoservices-raw-images-notification" {

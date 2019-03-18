@@ -7,6 +7,6 @@ provider:
 functions:
   tag:
     handler: handler.tag
-    role: arn:aws:iam::810096332563:role/lambda-nanoservices
+    role: arn:aws:iam::[ACCOUNT_NUMBER]:role/lambda-nanoservices
     events:     
-      - sns: arn:aws:sns:us-east-1:810096332563:s3-raw-images-put-topic
+      - sns: arn:aws:sns:us-east-1:[ACCOUNT_NUMBER]:s3-raw-images-put-topic

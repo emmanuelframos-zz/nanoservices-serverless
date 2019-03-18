@@ -15,7 +15,7 @@ provider:
 functions:
   upload:
     handler: handler.upload
-    role: arn:aws:iam::810096332563:role/lambda-nanoservices
+    role: arn:aws:iam::[ACCOUNT_NUMBER]:role/lambda-nanoservices
     events:
       - http:
          path: images
