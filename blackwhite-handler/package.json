@@ -12,6 +12,6 @@
     "jimp": "^0.6.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.416.0"
+    "aws-sdk": "^2.814.0"
   }
 }
